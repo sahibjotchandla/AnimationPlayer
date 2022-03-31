@@ -1,0 +1,40 @@
+frames: 676
+speed: 5 fps
+1
+
+Circle
+r: 25
+x: 75
+y: 80
+color: 255, 0, 0
+border: 5
+borderColor: 255, 0, 0
+effect
+Show
+start: 20
+effect
+ChangeColor
+start: 100
+color: 255, 0, 0
+borderColor: 255, 0, 0
+effect 
+Hide
+start: 150
+
+Rect
+length: 150
+width: 100
+x: 50
+y: 75
+color: 0, 255, 0
+border: 6
+borderColor: 0, 255, 0
+effect
+Show
+start: 200
+effect
+Jump
+start: 210
+x: 100
+y: 100
+
