@@ -1,4 +1,4 @@
-frames: 676
+frames: 1000
 speed: 5 fps
 1
 
