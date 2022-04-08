@@ -18,6 +18,12 @@ private Shape L1;
 
 // the counter (X) equal is started at 0
 private double counter = 0;
+    	
+/**
+* 
+* @param stage 
+* javafx application fun using the start method
+*/
 
 @Override
 public void start(Stage stage)
@@ -67,7 +73,14 @@ AnimationTimer timer = new AnimationTimer() {
 
 // a last run with a long variable type is initiated, can be identified as another counter for handle
 private long recentRun = 0;
-
+    
+    /**
+    * 
+    * @param now 
+    * animation timer override 
+    * 
+    */
+    
 // handle method with parameter here to have most recent run the same at the current time
 @Override
 public void handle(long here) {
@@ -114,7 +127,11 @@ int L1EffectTime2 = getEffectTime(frameAppearanceL2);
  
  // setText for the string of the label
  label.setText(String.format("Frame: %.0f", (labelState)));
-
+    
+    /**
+    * look for the present time that is with the assigned time for the effects
+    * look for the shapes of circle, rectangle and line 
+    */
  
  // Comparing the given time to the current time for effect of each shape
  
@@ -158,31 +175,63 @@ int L1EffectTime2 = getEffectTime(frameAppearanceL2);
  // start the timer of the animation to get frames
  timer.start();
  
- } 
+ }
+    
+    /**
+    * 
+    * @param n
+    * @return frameAppearance
+    * the frame is received when parsed 
+    */
  
  // parsing integer value from the circle effects String and returning to get frame
  public int getFrameAppearanceC1(int number){
  int frameAppearance = Integer.parseInt(AnimationPlayer.C1Effect[number]);
  return frameAppearance; 
  }
+    
+    /**
+    * 
+    * @param n
+    * @return frameAppearance
+    * the frame is received when parsed 
+    */
  
 // parsing integer value from the rectangle effects String and returning to get frame
  public int getFrameAppearanceR1(int number){
  int frameAppearance = Integer.parseInt(AnimationPlayer.R1Effect[number]);
  return frameAppearance; 
  }
- 
+    
+    /**
+    * 
+    * @param n
+    * @return frameAppearance
+    * the frame is received when parsed 
+    */
+   
  // parsing integer value from the line effects String and returning to get frame
  public int getFrameAppearanceL1(int number){
  int frameAppearance = Integer.parseInt(AnimationPlayer.L1Effect[number]);
  return frameAppearance; 
  }
- 
+    
+    /**
+    * 
+    * @param frameAppearance
+    * @return effectTime
+    * Divide the time that the effect will occur by the speed to determine the time in seconds
+    */
+    
  // getting EffecTime from dividing time of speed to convert the time into seconds
  public int getEffectTime(int frameAppearance){
  int effectTime = frameAppearance/AnimationPlayer.speed;
  return effectTime;
  }
+    
+    /** 
+    * @param args arguments for the command line 
+    */
  
  // main to run the program (reading txt file and running controller) 
  public static void main(String[] args) {
