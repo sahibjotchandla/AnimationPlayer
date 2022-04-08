@@ -57,6 +57,14 @@ public class AnimationPlayer{
  String shapetype = br.readLine(); // get the type of the shape
  
  if (shapetype.equals("Circle")){  // if the type is a circle 
+ /**
+ * circlular shape is created
+ * x y position of radius is set
+ * stroke thickness and color is set
+ * border color is set
+ * circle is added to shape array
+ */
+  
     Circle circle = new Circle();                            //create a circle shape
     circle.setRadius(getInt(br.readLine()));                 //set the radius and x and y position 
     circle.setCenterX(getInt(br.readLine()));                //set the color and the border width 
@@ -128,6 +136,13 @@ public class AnimationPlayer{
  } 
  }
  
+ /**
+ * if the type of shape is rectangle
+ * shape rectangle is created
+ * x and y position is set
+ * length and width of rectangle is created
+ */ 
+ 
  else if (shapetype.equals("Rectangle")){ //if type rectangle
     Rectangle rectangle = new Rectangle();             //if the shape type is a rectangle 
     rectangle.setX(getInt(br.readLine()));             //create a rectangle shape 
@@ -147,13 +162,15 @@ public class AnimationPlayer{
  
     shapes[count++] = rectangle; // add the rectangle to the shapes array 
     br.readLine();   // introduce the effects 
+  
     /*
-    - get the effect type and add to the rectangleEffects array 
-    - check for the show effect 
-    - check for the hide effect 
-    - check for the jump effect 
-    - check for the change color effect 
+    - effect type is receieved and added to the rectangleEffects array 
+    - look for the show effect 
+    - look for the hide effect 
+    - look for the jump effect 
+    - look for the change color effect 
     */
+  
  String effectTyper1 = br.readLine();
  if(effectTyper1.equals("Show")){ // if the effect is of type show 
     R1Effect[countRectangle++] = "Show";
@@ -179,13 +196,15 @@ public class AnimationPlayer{
  else{
  break;
  }
+ 
  /*
- - get the effect type and add to the rectangleEffects array 
- - check for the show effect 
- - check for the hide effect 
- - check for the jump effect 
- - check for the change color effect 
+ - effect type is receieved and added to the rectangleEffects array 
+ - look for the show effect 
+ - look for the hide effect 
+ - look for the jump effect 
+ - look for the change color effect 
  */
+  
  String effectTyper2 = br.readLine();
  if(effectTyper2.equals("Show")){  // if the effect is of type show 
     R1Effect[countRectangle++] = "Show";
@@ -215,6 +234,16 @@ public class AnimationPlayer{
  }
  }
  else if (shapetype.equals("Line")){ //if type line
+  
+ /**
+ * line shape is created 
+ * x and y position is read 
+ * final x and y position is read 
+ * thickness of stroke is given 
+ * line color is added to the rgb array
+ * stroke color is set 
+ */
+  
     Line line = new Line();                        //create a line shape 
     line.setStartX(getInt(br.readLine()));         //read the x and y position 
     line.setStartY(getInt(br.readLine()));         //read the end x and y position v
@@ -227,13 +256,15 @@ public class AnimationPlayer{
 
     shapes[count++] = line;  // add the line to the shapes array 
     br.readLine();
-    /*
-    - get the effect type and add to the lineEffects array 
-    - check for the show effect 
-    - check for the hide effect 
-    - check for the jump effect 
-    - check for the change color effect 
-    */
+  
+     /**
+     * effect type is receieved and added to the lineEffects array 
+     * look for the show effect 
+     * look for the hide effect 
+     * look for the jump effect 
+     * look for the change color effect 
+     */
+  
  String effectTypel1 = br.readLine();
  if(effectTypel1.equals("Show")){  // if the effect is a type show 
     L1Effect[lineCount++] = "Show";
@@ -259,13 +290,15 @@ public class AnimationPlayer{
  else{ // else it will break out of the loop
  break;
  }
+ 
  /**
- * get the effect type and add to the lineEffects array 
- * check for the show effect 
- * check for the hide effect 
- * check for the jump effect 
- * check for the change color effect 
+ * effect type is receieved and added to the lineEffects array 
+ * look for the show effect 
+ * look for the hide effect 
+ * look for the jump effect 
+ * look for the change color effect 
  */
+ 
  String effectTypel2 = br.readLine();
  
  if(effectTypel2.equals("Show")){ // if the effect is of type show 
