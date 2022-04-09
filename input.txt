@@ -1,0 +1,29 @@
+frames: 1
+speed: 10fps
+2
+
+Circle
+r: 10
+x: 50
+y: 50
+color: 255, 0, 0
+effect
+Show
+start: 10
+effect
+Hide
+start: 120
+
+Rect
+length: 100
+width: 50
+x: 25
+y: 25
+border: 5
+effect
+Show
+start: 15
+Jump
+start: 50
+x: 30
+y: 30
