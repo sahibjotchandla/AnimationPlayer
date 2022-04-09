@@ -1,4 +1,4 @@
-frames: 1
+frames: 1000
 speed: 10fps
 2
 
